@@ -2,7 +2,11 @@ const model = {
     app: {
         currentPage: "mainPage",
     },
-/*-------------------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------------------*/
+    // VIEWSTATE
+    /*-------------------------------------------------------------------------------*/
+    
     viewState: {
         mainPage: {
             search: "",
@@ -23,7 +27,7 @@ const model = {
             name: "",
             type: "",
             lastUpdated: "",
-            
+
             prepTime: null,
             cookTime: null,
             servings: null,
@@ -50,10 +54,42 @@ const model = {
         }
 
     },
-/*-------------------------------------------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+    // DATA
+    /*-------------------------------------------------------------------------------*/
+
+    recipeTypeList: [
+        { id: 1, name: "Breakfast" },
+        { id: 2, name: "Lunch" },
+        { id: 3, name: "Side Dishes" },
+        { id: 4, name: "Main Dishes" },
+        { id: 5, name: "Dessert" },
+        { id: 6, name: "Snacks & Appetizers" },
+        { id: 7, name: "Baking & Bread" },
+        { id: 8, name: "Drinks & Smoothies" },
+    ],
+
+    unitTypeList: [
+        // Vekt og volum (US Customary)
+        { id: 1, name: "pound" },
+        { id: 2, name: "ounce" },
+        { id: 3, name: "fluid ounce" },
+        { id: 4, name: "cup" },
+        { id: 5, name: "teaspoon" },
+        { id: 6, name: "tablespoon" },
+        { id: 7, name: "pinch" },
+
+        // Stykk og pakninger (Universelle)
+        { id: 8, name: "clove" },
+        { id: 9, name: "piece" },
+        { id: 10, name: "package" },
+        { id: 11, name: "can" },
+        { id: 12, name: "to taste" },
+    ],
+
     recipe: {
         name: "Pork Chops in Garlic Mushroom Sauce",
-        type: "Main Dishes",
+        type: 4,
         lastUpdated: "2026-10-20",
 
         prepTime: 10,
@@ -64,50 +100,51 @@ const model = {
         ingredients: [
             {
                 amount: 2,
-                unitType: "pound",
+                unitType: 1,
                 name: "boneless pork chops"
             },
             {
                 amount: 0.5,
-                unitType: "teaspoon",
+                unitType: 5,
                 name: "paprika"
             },
             {
                 amount: null,
-                unitType: "to taste",
+                unitType: 12,
                 name: "kosher salt and ground black pepper"
             },
             {
                 amount: 0.25,
-                unitType: "cup",
+                unitType: 4,
                 name: "butter, divided"
             },
             {
                 amount: 8,
-                unitType: "ounce",
+                unitType: 2,
                 name: "sliced fresh mushrooms"
             },
             {
                 amount: 4,
-                unitType: "clove",
+                unitType: 8,
                 name: "garlic, minced"
             },
             {
                 amount: 1,
-                unitType: "teaspoon",
+                unitType: 5,
                 name: "Dijon mustard"
             },
             {
                 amount: 2,
-                unitType: "tablespoon",
+                unitType: 6,
                 name: "all-purpose flour"
             },
             {
                 amount: 2,
-                unitType: "cup",
+                unitType: 4,
                 name: "beef broth"
             }
         ],
+
         instructions: [
             {
                 stepNumber: 1,
