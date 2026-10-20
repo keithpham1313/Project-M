@@ -33,7 +33,7 @@ const model = {
             servings: null,
             ingredients: [
                 {
-                    ämount: null,
+                    amount: null,
                     unitType: "",
                     name: "",
                 },
