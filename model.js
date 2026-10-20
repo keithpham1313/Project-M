@@ -6,7 +6,7 @@ const model = {
     /*-------------------------------------------------------------------------------*/
     // VIEWSTATE
     /*-------------------------------------------------------------------------------*/
-    
+
     viewState: {
         mainPage: {
             search: "",
@@ -88,6 +88,7 @@ const model = {
     ],
 
     recipe: {
+        id: 1,
         name: "Pork Chops in Garlic Mushroom Sauce",
         type: 4,
         lastUpdated: "2026-10-20",
